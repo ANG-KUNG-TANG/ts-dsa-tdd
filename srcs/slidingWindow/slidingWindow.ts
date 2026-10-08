@@ -44,21 +44,32 @@ function maxSum(arr: number[], k : number): number | null {
     return maxSum;
 }
 
-export default function maxSubArraySum(arr: number[],k: number): number | null{
-    if (arr.length < k){return null}
+export default function maxSumArraySum(arr: number[], k : number): number | null {
+    if (arr.length < k) return null; // Added safety check
 
     let windowSum = 0;
-
-    for (let i = 0; i < k;i++){
-        windowSum += arr[i]
-    }
     
-    let maxSum = windowSum;
-
-    for (let i=k; i < arr.length; i++){
-        windowSum = windowSum - arr[k - i] + arr[i]
-
-        maxSum = Math.max(windowSum, maxSum);
+    // ③ calculate first k elements
+    for (let i = 0; i < k ; i++){
+        windowSum += arr[i];
     }
-    return maxSum
+
+    let maxSum = windowSum;
+    let left = 0; // Move left pointer declaration here to track the start of the window
+
+    // ⑤ for loop → move window
+    for (let i = k; i < arr.length; i++){
+        // ⑧ update windowSum (subtract leaving value, add entering value)
+        windowSum = windowSum - arr[left] + arr[i];
+        
+        // Move the left pointer forward for the next iteration!
+        left++; 
+
+        // ⑨ update max
+        if (windowSum > maxSum){
+            maxSum = windowSum;
+        }
+    }
+
+    return maxSum;
 }
