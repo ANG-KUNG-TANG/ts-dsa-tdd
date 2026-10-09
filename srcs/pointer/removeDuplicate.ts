@@ -35,3 +35,34 @@ export default function removeDuplicate(arr: number[]): number{
 let arr = [1,2,1,3,3,4,5,4]
 console.log(arr)
 console.log(removeDuplicate(arr))
+
+
+
+/**
+ * Steps to solve Two Pointers (Same Direction)
+ *
+ * @param arr - A sorted array of numbers
+ * @returns The length of the array's unique portion
+ *
+ * 1. Handle the empty array.
+ *    - If the array is empty, return 0.
+ *
+ * 2. Create a slow pointer to track the position
+ *    of the last unique element.
+ *
+ * 3. Create a fast pointer starting at index 1.
+ *
+ * 4. Loop while the fast pointer is inside the array.
+ *
+ * 5. Compare arr[fast] with arr[slow].
+ *
+ * 6. If they are different:
+ *    - Move the slow pointer one position right.
+ *    - Copy arr[fast] into arr[slow].
+ *
+ * 7. Move the fast pointer one position right
+ *    on every iteration.
+ *
+ * 8. Return slow + 1 as the number of unique elements.
+ */
+

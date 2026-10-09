@@ -1,4 +1,35 @@
 
+/**
+ * Steps to solve Variable-Size Sliding Window
+ *
+ * @param arr - An array of positive numbers
+ * @param target - The minimum required sum
+ * @returns The minimum subarray length, or 0 if no valid subarray exists
+ *
+ * 1. Create a left pointer at index 0.
+ *
+ * 2. Create a variable to store the current window sum.
+ *
+ * 3. Create a variable to store the minimum window length.
+ *    - Initialize it to Infinity.
+ *
+ * 4. Loop through the array using the right pointer.
+ *
+ * 5. Add the current right element to the window sum.
+ *
+ * 6. While the window sum is greater than or equal to target:
+ *    - Update the minimum window length.
+ *    - Subtract the element at the left pointer from the sum.
+ *    - Move the left pointer one position to the right.
+ *
+ * 7. Continue expanding the window with the right pointer.
+ *
+ * 8. After the loop:
+ *    - If no valid window was found, return 0.
+ *    - Otherwise, return the minimum window length.
+ */
+
+
 
 function maxSummary(arr: number[], target: number): number | null {
 

@@ -1,4 +1,32 @@
-//[5, 3, 4, 1, 2]
+
+/**
+ * Steps to solve Insertion Sort
+ *
+ * @param arr - An array of numbers
+ * @returns The sorted array in ascending order
+ *
+ * 1. Start from index 1 because the first element
+ *    is treated as a sorted portion.
+ *
+ * 2. Store the current element as the key.
+ *
+ * 3. Set a pointer to the element immediately to the left.
+ *
+ * 4. While the pointer is valid and the left element
+ *    is greater than the key:
+ *    - Shift the left element one position to the right.
+ *    - Move the pointer one position to the left.
+ *
+ * 5. Insert the key into the empty position.
+ *
+ * 6. Continue with the next element.
+ *
+ * 7. Repeat until every element has been inserted
+ *    into the sorted portion.
+ *
+ * 8. Return the sorted array.
+ */
+
 
 
 //steps to solve insertion sort algorithm

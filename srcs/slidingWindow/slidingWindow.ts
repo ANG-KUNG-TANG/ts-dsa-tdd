@@ -1,22 +1,31 @@
-// ① function
-//    ↓
-// ② windowSum = 0
-//    ↓
-// ③ calculate first k elements
-//    ↓
-// ④ max = windowSum
-//    ↓
-// ⑤ for loop → move window
-//    ↓
-// ⑥ identify leaving value
-//    ↓
-// ⑦ identify entering value
-//    ↓
-// ⑧ update windowSum
-//    ↓
-// ⑨ update max
-//    ↓
-// ⑩ return max
+
+/**
+ * Steps to solve Fixed-Size Sliding Window
+ *
+ * @param arr - An array of numbers
+ * @param k - The fixed window size
+ * @returns The maximum sum of a window
+ *
+ * 1. Check whether k is valid for the array.
+ *
+ * 2. Create a variable to store the sum of the first k elements.
+ *
+ * 3. Set the initial window sum as the maximum sum.
+ *
+ * 4. Loop through the remaining elements, starting at index k.
+ *
+ * 5. For each new element:
+ *    - Add the new element entering the window.
+ *    - Subtract the element leaving the window.
+ *
+ * 6. Update the maximum sum if the current window sum is greater.
+ *
+ * 7. Continue until the end of the array.
+ *
+ * 8. Return the maximum sum.
+ */
+
+
 
 
 //**fix window */

@@ -1,17 +1,30 @@
-// const array = [64, 25, 12, 22, 11];
-//[11, 12, 22, 25, 64]
 
-// Outer Loop (i) = The TARGET (Where to put the item)
+/**
+ * Steps to solve Selection Sort
+ *
+ * @param arr - An array of numbers
+ * @returns The sorted array in ascending order
+ *
+ * 1. Loop through the array to choose the next position to fill.
+ *
+ * 2. Assume the current position contains the minimum value.
+ *
+ * 3. Loop through the remaining unsorted portion.
+ *
+ * 4. If a smaller element is found:
+ *    - Update the minimum index.
+ *
+ * 5. After checking the unsorted portion:
+ *    - Swap the minimum element with the element
+ *      at the current position.
+ *
+ * 6. Move to the next position.
+ *
+ * 7. Repeat until the array is sorted.
+ *
+ * 8. Return the sorted array.
+ */
 
-// It points to the empty slot you are trying to fill next.
-
-// It moves slowly, one spot at a time from left to right.
-
-// Inner Loop (j) = The SCANNER (Where to look for the item)
-
-// It starts right after the target (j = i + 1).
-
-// It runs fast all the way to the end of the array, looking for the smallest value to put into slot i.
 
 // Selection Sort:
 // Find the smallest element in the unsorted part

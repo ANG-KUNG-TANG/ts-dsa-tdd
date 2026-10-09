@@ -1,4 +1,34 @@
 
+/**
+ * Steps to solve Merge Sort
+ *
+ * @param arr - An array of numbers
+ * @returns The sorted array in ascending order
+ *
+ * 1. Check the base case:
+ *    - If the array has zero or one element,
+ *      it is already sorted.
+ *
+ * 2. Find the middle index of the array.
+ *
+ * 3. Split the array into a left half and a right half.
+ *
+ * 4. Recursively sort the left half.
+ *
+ * 5. Recursively sort the right half.
+ *
+ * 6. Merge the two sorted halves:
+ *    - Compare the first unprocessed element
+ *      from each half.
+ *    - Add the smaller element to the result.
+ *    - Advance the pointer for the half you selected.
+ *
+ * 7. Add any remaining elements from either half.
+ *
+ * 8. Return the merged sorted array.
+ */
+
+
 
 export default function mergeSort(array: number[]): number[] {
     // Base case: if the array has 0 or 1 elements, it is already sorted.
